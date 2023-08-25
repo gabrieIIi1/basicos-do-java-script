@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medida</title>
+    <style>
+        body{   font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+
+<body>
+
+<h1>Conversor R$  → US$ </h1>
+
+   <button onclick ="carteira()">Conversor de dolar pro real</button>
+   
+   <p>Clique no botão a cima para iniciar</p>
+   <section id="saida">
+
+   </section>
+<script>
+
+let dolar = Number(prompt("Quanto esta a cotação do dolar agora?"));
+
+function carteira(){
+    let quantidade = Number(window.prompt("Quantos $ você tem na carteira?"))
+
+    let resultado =   quantidade/dolar
+
+    let resp = window.document.getElementById('saida')
+
+    resp.innerHTML += ` <p>você tem ${resultado} Doláres `
+
+
+
+}
+
+
+</script>
+
+</body>
+
+</html> 
