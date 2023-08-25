@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medida</title>
+    <style>
+        body{   font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+
+<body>
+    <h1>Conversor de Temperaturas</h1>
+
+    <button onclick ="converterMedida()">Conversor de temperatura</button>
+
+    <section id="saida">
+    
+    </section>
+<script>
+
+   let resp = window.document.getElementById('saida')
+    function converterMedida(){
+
+   let numero = Number(window.prompt('Digite uma temperatura em C(celsius)'))
+   let f = numero *1.8+32
+   let kv = numero + 273
+ 
+   
+   resp.innerHTML +=`<h1>A temperatura de ${numero}°C, corresponde a..`
+   resp.innerHTML += `<p> ${f}°F (Fahrenheit)`
+   resp.innerHTML += `<p> ${kv}°K (Kelvin)`
+    }
+
+
+</script>
+
+</body>
+
+</html>

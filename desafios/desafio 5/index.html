@@ -25,16 +25,19 @@
 
    let numero = Number(window.prompt('Digite uma distância em metros (m)'))
    let km = numero / 1000
-   let hm = numero * 10
-   let Dam = numero
+   let hm = numero / 100
+   let dam = numero / 10
+   let dm = numero * 10
+   let cm = numero * 100
+   let mm = numero * 1000
    
    resp.innerHTML +=`<h1>A distância de ${numero} metros, corresponde a..`
    resp.innerHTML += `<p> ${km} Quilômetros (Km)`
-   resp.innerHTML += '<p>Hectômetros(Hm)'
-   resp.innerHTML += '<p>Decâmetros(Dam)'
-   resp.innerHTML += '<p>Decímetros(Dm)'
-   resp.innerHTML += '<p>Centímetros(Cm)'
-   resp.innerHTML += '<p>Milímetros(Mm)'
+   resp.innerHTML += `<p> ${hm} Hectômetros(Hm)`
+   resp.innerHTML += `<p> ${dam} Decâmetros(Dam)`
+   resp.innerHTML += `<p> ${dm} Decímetros(Dm)`
+   resp.innerHTML += `<p> ${cm} Centímetros(Cm)`
+   resp.innerHTML += `<p> ${mm} Milímetros(Mm)`
     }
 
 
