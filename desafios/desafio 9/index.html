@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medida</title>
+    <style>
+        body{   font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+
+<body>
+    <h1>Reajuste Salarial</h1>
+
+    <button onclick ="calcularDesconto()">Reajustar Salário</button>
+    <p>Clique no desconto a cima para iniciar</p>
+
+    <section id="saida">
+    
+    </section>
+<script>
+
+   let resp = window.document.getElementById('saida')
+    function calcularDesconto(){
+
+   let nome = window.prompt('Qual é o nome do funcionário?')
+   let salario = Number(window.prompt(`Qual é o salário ${nome}?`))
+   let reajuste = Number(window.prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+
+
+   let resultado = salario * reajuste / 100
+   let novo = salario + resultado  
+   
+ 
+   
+   resp.innerHTML +=`<h1>${nome} recebeu um aumento salarial!`
+   resp.innerHTML += `<p> O salário atual era R$${salario}.`
+   resp.innerHTML += `<p> Com um aumento de R$${reajuste}%, o salário vai aumentar R$${resultado} no próximo mês.`
+   resp.innerHTML += `<p> E a partir daí, ${nome} vai passar a ganhar R$${novo}.`
+    }
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medida</title>
+    <style>
+        body{   font: 12pt Arial;}
+        button{font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+
+<body>
+    <h1>Desafio Bhaskara</h1>
+
+    <button onclick ="calcularDesconto()">Calcular</button>
+    <p>Considerando uma equação no formato ax²+ bx + c = 0, aperte o botão a cima para calcular o valor de Δ. </p>
+
+    <section id="saida">
+    
+    </section>
+<script>
+
+   let resp = window.document.getElementById('saida')
+    function calcularDesconto(){
+
+   let valorA = Number(window.prompt('Qual é o valor de a?'))
+   let valorB = Number(window.prompt(`Qual é o valor de b?`))
+   let valorC = Number(window.prompt(`Qual é o valor c?`))
+
+
+   let delta = (valorB ** 2) -4 *valorA*valorC
+
+ 
+   
+   resp.innerHTML +=`<h1>A equação atual é ${valorA}x² + ${valorB}x + ${valorC}= 0`
+   resp.innerHTML += `<p> O cálculo realizado será Δ = ${valorB}² -4 . ${valorA} . ${valorC}`
+   resp.innerHTML += `<p> O valor calculador foi  Δ = ${delta}`
+    }
+
+
+</script>
+
+</body>
+
+</html>

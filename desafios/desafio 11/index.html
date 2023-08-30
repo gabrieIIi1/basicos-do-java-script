@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medida</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ano bissexto</h1>
+
+    <button onclick="calcularDesconto()">Verificar</button>
+    <p>Informe um ano para saber se é bissexto </p>
+
+    <section id="saida">
+
+    </section>
+    <script>
+
+       
+        function calcularDesconto() {
+
+            let ano = Number(window.prompt('Qual é o ano que você quer verificar?'))
+
+             let resp = window.document.getElementById('saida')
+            if((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0)  {
+
+                resp.innerHTML += `<p>O Ano de ${ano} é bissexto`
+                       
+
+            } else {
+                resp.innerHTML += `<p>O Ano de ${ano} não é bissexto`
+
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medida</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Situação do aluno</h1>
+
+    <button onclick="calcularDesconto()">Entrar com as notas</button>
+    <p>Clique no botão para informar as notas do aluno.</p>
+
+    <section id="saida">
+
+    </section>
+
+
+    <script>
+        let resp = window.document.getElementById('saida')
+
+        function calcularDesconto() {
+
+            let nome = window.prompt('Qual é o nome do aluno?')
+            let primeiraNota = Number(window.prompt(`Primeira nota de ${nome}`))
+            let segundaNota = Number(window.prompt(`Segunda nota de ${nome}`))
+
+            let media = (primeiraNota + segundaNota) / 2
+
+            resp.innerHTML += `<h1>Analisando a situação de ${nome}`
+            resp.innerHTML += `<p>Com as notas  ${primeiraNota} e ${segundaNota} a média é ${media}`
+
+            if (media >= 6.0) {
+                resp.innerHTML += `Com média a cima de 6.0 o aluno esta aprovado.`
+            }
+                else if (media >= 3.0 && media < 6.0) {
+                    resp.innerHTML += `Com média entre 3.0 e 6.0 o aluno está em recuperação.`
+                }
+
+                else if (media <= 3.0) {
+                    resp.innerHTML += `Com média menor que 3.0 o aluno esta reprovado.`
+                }
+
+            }
+
+
+    </script>
+
+</body>
+
+</html>
